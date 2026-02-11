@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV de Desarrollador Full Stack - Python, Django, Web Development">
+    <meta name="keywords" content="desarrollador, full stack, python, django, web, programador">
+    <meta name="author" content="Tu Nombre">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="CV - Desarrollador Full Stack">
+    <meta property="og:description" content="Portafolio y CV profesional de desarrollador">
+    <meta property="og:type" content="website">
+    
+    <title>CV - Desarrollador Full Stack</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/main.css">
+    
+    <!-- Favicon (opcional) -->
+    <!-- <link rel="icon" type="image/png" href="./public/favicon.ico"> -->
+</head>
+<body>
+    <!-- Decoraciones fijas -->
+    <div class="deco-circle"></div>
+    <div class="deco-square"></div>
+
+    <!-- Contenedor principal donde se inyectará el contenido -->
+    <div class="wrapper">
+        <div id="app">
+            <!-- El contenido se cargará dinámicamente aquí -->
+            <div class="loading">Cargando CV</div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <!-- Cargar en orden: utilidades → data loader → animaciones → main -->
+    <script src="./src/js/utils.js"></script>
+    <script src="./src/utils/data-loader.js"></script>
+    <script src="./src/js/animations.js"></script>
+    <script src="./src/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+/**
+ * LAYOUT CSS
+ * Estructura principal del sitio y sistema de grid
+ */
+
+/* ============================================
+   RESET Y BASE
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--color-bg-main);
+    color: var(--color-text-primary);
+    line-height: var(--line-height-normal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   CONTENEDOR PRINCIPAL
+   ============================================ */
+
+.wrapper {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: var(--spacing-2xl) var(--spacing-lg) 5rem;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: var(--spacing-lg) var(--spacing-md) 3.75rem;
+    }
+}
+
+/* ============================================
+   GRID SYSTEM
+   ============================================ */
+
+.content-grid {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+/* Layout de dos columnas */
+.content-grid.two-column {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Layout de ancho completo */
+.content-grid.full-width {
+    grid-template-columns: 1fr;
+}
+
+/* Layout de tres columnas */
+.content-grid.three-column {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Responsive grids */
+@media (max-width: 768px) {
+    .content-grid.two-column,
+    .content-grid.three-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   SECCIONES
+   ============================================ */
+
+.section {
+    margin-bottom: var(--spacing-3xl);
+}
+
+@media (max-width: 768px) {
+    .section {
+        margin-bottom: var(--spacing-2xl);
+    }
+}
+
+/* ============================================
+   DECORACIONES FIJAS
+   ============================================ */
+
+.deco-circle {
+    width: 40px;
+    height: 40px;
+    background: var(--color-primary);
+    border-radius: var(--border-radius-full);
+    position: fixed;
+    top: 60px;
+    right: 40px;
+    z-index: var(--z-below);
+}
+
+.deco-square {
+    width: 60px;
+    height: 60px;
+    background: var(--color-accent-1);
+    position: fixed;
+    bottom: 60px;
+    left: 40px;
+    z-index: var(--z-below);
+    transform: rotate(15deg);
+}
+
+@media (max-width: 768px) {
+    .deco-circle,
+    .deco-square {
+        display: none;
+    }
+}
+
+/* ============================================
+   UTILIDADES DE ESPACIADO
+   ============================================ */
+
+/* Margins */
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+
+/* Paddings */
+.p-sm { padding: var(--spacing-sm); }
+.p-md { padding: var(--spacing-md); }
+.p-lg { padding: var(--spacing-lg); }
+.p-xl { padding: var(--spacing-xl); }
+
+/* ============================================
+   UTILIDADES DE DISPLAY
+   ============================================ */
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-sm { gap: var(--spacing-sm); }
+.gap-md { gap: var(--spacing-md); }
+.gap-lg { gap: var(--spacing-lg); }
+
+/* ============================================
+   UTILIDADES DE TEXTO
+   ============================================ */
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+/* ============================================
+   VISIBILIDAD RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
