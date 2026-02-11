@@ -1,0 +1,111 @@
+/**
+ * SECTIONS COMPONENT
+ * Headers de secciones y elementos relacionados
+ */
+
+/* ============================================
+   SECTION HEADER
+   ============================================ */
+
+.section-header {
+    display: flex;
+    align-items: baseline;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-number {
+    font-family: var(--font-display);
+    font-size: var(--font-size-md);
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+    min-width: 2.5rem;
+}
+
+.section-header h2 {
+    margin: 0;
+}
+
+.section-line {
+    flex: 1;
+    height: 3px;
+    background: var(--color-text-primary);
+    margin-left: var(--spacing-sm);
+    transition: background-color var(--transition-base);
+}
+
+.section-header:hover .section-line {
+    background: var(--color-primary);
+}
+
+/* ============================================
+   HIGHLIGHT BOX
+   ============================================ */
+
+.highlight-box {
+    background: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding: var(--spacing-xl);
+    margin: var(--spacing-2xl) 0;
+    border-left: 8px solid var(--color-primary);
+    position: relative;
+    transition: transform var(--transition-base);
+}
+
+.highlight-box:hover {
+    transform: translateX(4px);
+}
+
+.highlight-box h3 {
+    color: var(--color-accent-1);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-lg);
+}
+
+.highlight-box p {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-md);
+}
+
+.highlight-box .tags {
+    border-top: none;
+    padding-top: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+    margin-top: 5rem;
+    padding: var(--spacing-lg) 0;
+    border-top: var(--border-width-medium) solid var(--color-text-primary);
+    text-align: right;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .section-header {
+        flex-wrap: wrap;
+    }
+
+    .section-line {
+        width: 100%;
+        margin: var(--spacing-sm) 0 0 0;
+    }
+    
+    footer {
+        text-align: center;
+    }
+}

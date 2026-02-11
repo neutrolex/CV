@@ -1,36 +1,55 @@
 /**
- * MAIN CSS
- * Archivo principal que importa todos los estilos
+ * MAIN CSS - Punto de entrada principal
+ * Importa todos los módulos CSS de forma organizada
  */
 
-/* Importar Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;600;800&display=swap');
-
-/* Importar variables CSS */
-@import url('./variables.css');
-
-/* Importar layout y estructura */
-@import url('./layout.css');
-
-/* Importar componentes */
-@import url('./components.css');
-
 /* ============================================
-   ESTILOS ADICIONALES GLOBALES
+   IMPORTS - Orden de carga importante
    ============================================ */
 
-/* Smooth scroll para toda la página */
+/* 1. Fuentes externas */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;600;800&display=swap');
+
+/* 2. Variables y tokens de diseño */
+@import url('./tokens/variables.css');
+@import url('./tokens/typography.css');
+
+/* 3. Base y reset */
+@import url('./base/reset.css');
+@import url('./base/base.css');
+
+/* 4. Layout y estructura */
+@import url('./layout/grid.css');
+@import url('./layout/containers.css');
+
+/* 5. Componentes */
+@import url('./components/hero.css');
+@import url('./components/sections.css');
+@import url('./components/cards.css');
+@import url('./components/tags.css');
+@import url('./components/decorations.css');
+
+/* 6. Utilidades */
+@import url('./utilities/spacing.css');
+@import url('./utilities/display.css');
+@import url('./utilities/responsive.css');
+
+/* ============================================
+   ESTILOS GLOBALES ADICIONALES
+   ============================================ */
+
+/* Smooth scroll */
 html {
     scroll-behavior: smooth;
 }
 
-/* Mejoras de accesibilidad */
+/* Accesibilidad */
 :focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
 
-/* Links (si decides agregarlos) */
+/* Links */
 a {
     color: var(--color-primary);
     text-decoration: none;
@@ -53,7 +72,7 @@ a:hover {
     color: var(--color-text-light);
 }
 
-/* Scrollbar personalizada (opcional) */
+/* Scrollbar personalizada */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -69,16 +88,4 @@ a:hover {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--color-primary-dark);
-}
-
-/* Transiciones suaves para temas */
-* {
-    transition: background-color var(--transition-slow),
-                color var(--transition-slow),
-                border-color var(--transition-slow);
-}
-
-/* Prevenir transiciones en carga de página */
-.preload * {
-    transition: none !important;
 }

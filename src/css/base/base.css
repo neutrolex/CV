@@ -1,0 +1,95 @@
+/**
+ * BASE STYLES
+ * Estilos base para elementos HTML
+ */
+
+/* ============================================
+   BODY Y HTML
+   ============================================ */
+
+body {
+    font-family: var(--font-body);
+    background: var(--color-bg-main);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-base);
+}
+
+/* ============================================
+   TIPOGRAFÍA
+   ============================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    line-height: var(--line-height-tight);
+    color: var(--color-text-primary);
+}
+
+h1 {
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+h2 {
+    font-size: var(--font-size-2xl);
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+h3 {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+}
+
+p {
+    line-height: var(--line-height-normal);
+    margin-bottom: var(--spacing-md);
+}
+
+.bio {
+    font-size: var(--font-size-md);
+    color: var(--color-text-secondary);
+    margin-top: var(--spacing-lg);
+    line-height: var(--line-height-relaxed);
+}
+
+/* ============================================
+   LISTAS
+   ============================================ */
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 6px 0;
+    padding-left: var(--spacing-md);
+    position: relative;
+    font-size: var(--font-size-sm);
+}
+
+li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* ============================================
+   TRANSICIONES GLOBALES
+   ============================================ */
+
+* {
+    transition: background-color var(--transition-slow),
+                color var(--transition-slow),
+                border-color var(--transition-slow);
+}
+
+/* Prevenir transiciones en carga */
+.preload * {
+    transition: none !important;
+}

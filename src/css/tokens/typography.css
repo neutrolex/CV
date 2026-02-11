@@ -1,0 +1,51 @@
+/**
+ * TYPOGRAPHY TOKENS
+ * Sistema tipográfico centralizado
+ */
+
+:root {
+    /* ============================================
+       FAMILIAS DE FUENTES
+       ============================================ */
+    
+    --font-display: 'Archivo Black', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+    
+    /* ============================================
+       TAMAÑOS DE FUENTE - Escala modular
+       ============================================ */
+    
+    --font-size-xs: 0.75rem;      /* 12px */
+    --font-size-sm: 0.875rem;     /* 14px */
+    --font-size-base: 1rem;       /* 16px */
+    --font-size-md: 1.125rem;     /* 18px */
+    --font-size-lg: 1.5rem;       /* 24px */
+    --font-size-xl: 2rem;         /* 32px */
+    --font-size-2xl: 2.5rem;      /* 40px */
+    --font-size-3xl: 3rem;        /* 48px */
+    
+    /* ============================================
+       PESOS DE FUENTE
+       ============================================ */
+    
+    --font-weight-normal: 400;
+    --font-weight-medium: 600;
+    --font-weight-bold: 800;
+    
+    /* ============================================
+       ALTURAS DE LÍNEA
+       ============================================ */
+    
+    --line-height-tight: 1.1;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.8;
+    
+    /* ============================================
+       ESPACIADO DE LETRAS
+       ============================================ */
+    
+    --letter-spacing-tight: -0.02em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.03em;
+    --letter-spacing-wider: 0.05em;
+}

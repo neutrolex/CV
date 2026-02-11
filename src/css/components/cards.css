@@ -1,0 +1,109 @@
+/**
+ * CARDS COMPONENT
+ * Tarjetas de contenido y elementos relacionados
+ */
+
+/* ============================================
+   CARD BASE
+   ============================================ */
+
+.item {
+    background: var(--color-bg-card);
+    padding: var(--spacing-lg);
+    border: var(--border-width-medium) solid var(--color-text-primary);
+    position: relative;
+    transition: transform var(--transition-base);
+}
+
+.item::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    right: -6px;
+    width: 100%;
+    height: 100%;
+    border: var(--border-width-medium) solid var(--color-text-primary);
+    z-index: var(--z-below);
+    background: var(--color-accent-1);
+    transition: all var(--transition-base);
+}
+
+.item:hover {
+    transform: translate(2px, -2px);
+}
+
+.item:hover::after {
+    transform: translate(2px, 2px);
+}
+
+/* ============================================
+   CARD VARIATIONS
+   ============================================ */
+
+/* Variación de colores en las sombras */
+.item:nth-child(3n+1)::after {
+    background: var(--color-accent-2);
+}
+
+.item:nth-child(3n+2)::after {
+    background: var(--color-accent-1);
+}
+
+.item:nth-child(3n+3)::after {
+    background: var(--color-accent-3);
+}
+
+/* ============================================
+   CARD CONTENT
+   ============================================ */
+
+.item h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-primary);
+}
+
+.item ul {
+    margin-bottom: var(--spacing-md);
+}
+
+.item li {
+    color: var(--color-text-secondary);
+    transition: color var(--transition-base);
+}
+
+.item:hover li {
+    color: var(--color-text-primary);
+}
+
+/* ============================================
+   CARD STATES
+   ============================================ */
+
+/* Estado de carga */
+.item.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.item.loading::after {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Estado de error */
+.item.error {
+    border-color: #f44336;
+    background: #ffebee;
+}
+
+.item.error::after {
+    background: #ffcdd2;
+}

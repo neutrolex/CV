@@ -1,0 +1,87 @@
+/**
+ * GRID SYSTEM
+ * Sistema de grillas flexible y responsive
+ */
+
+/* ============================================
+   GRID BASE
+   ============================================ */
+
+.content-grid {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+/* ============================================
+   LAYOUTS DE GRID
+   ============================================ */
+
+/* Layout de dos columnas */
+.content-grid.two-column {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Layout de ancho completo */
+.content-grid.full-width {
+    grid-template-columns: 1fr;
+}
+
+/* Layout de tres columnas */
+.content-grid.three-column {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Layout de cuatro columnas */
+.content-grid.four-column {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Layout asimétrico */
+.content-grid.sidebar-main {
+    grid-template-columns: 1fr 2fr;
+}
+
+.content-grid.main-sidebar {
+    grid-template-columns: 2fr 1fr;
+}
+
+/* ============================================
+   RESPONSIVE GRIDS
+   ============================================ */
+
+@media (max-width: 768px) {
+    .content-grid.two-column,
+    .content-grid.three-column,
+    .content-grid.four-column,
+    .content-grid.sidebar-main,
+    .content-grid.main-sidebar {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .content-grid.four-column {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .content-grid.three-column {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ============================================
+   GRID UTILITIES
+   ============================================ */
+
+.grid-item-span-2 {
+    grid-column: span 2;
+}
+
+.grid-item-span-3 {
+    grid-column: span 3;
+}
+
+.grid-item-span-full {
+    grid-column: 1 / -1;
+}
