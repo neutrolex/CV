@@ -1,0 +1,145 @@
+/**
+ * RESPONSIVE UTILITIES
+ * Clases utilitarias para visibilidad responsive
+ */
+
+/* ============================================
+   VISIBILIDAD POR BREAKPOINT
+   ============================================ */
+
+/* Ocultar en móvil */
+@media (max-width: 767px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Ocultar en tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hide-tablet {
+        display: none !important;
+    }
+}
+
+/* Ocultar en desktop */
+@media (min-width: 1024px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+/* Mostrar solo en móvil */
+@media (min-width: 768px) {
+    .show-mobile-only {
+        display: none !important;
+    }
+}
+
+/* Mostrar solo en tablet */
+.show-tablet-only {
+    display: none !important;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .show-tablet-only {
+        display: block !important;
+    }
+}
+
+/* Mostrar solo en desktop */
+.show-desktop-only {
+    display: none !important;
+}
+
+@media (min-width: 1024px) {
+    .show-desktop-only {
+        display: block !important;
+    }
+}
+
+/* ============================================
+   RESPONSIVE TEXT
+   ============================================ */
+
+/* Tamaños de texto responsive */
+@media (max-width: 767px) {
+    .text-responsive-sm {
+        font-size: var(--font-size-sm);
+    }
+    
+    .text-responsive-base {
+        font-size: var(--font-size-base);
+    }
+    
+    .text-responsive-lg {
+        font-size: var(--font-size-md);
+    }
+}
+
+/* ============================================
+   RESPONSIVE SPACING
+   ============================================ */
+
+/* Espaciado reducido en móvil */
+@media (max-width: 767px) {
+    .mobile-p-sm { padding: var(--spacing-sm); }
+    .mobile-p-md { padding: var(--spacing-md); }
+    .mobile-m-sm { margin: var(--spacing-sm); }
+    .mobile-m-md { margin: var(--spacing-md); }
+    
+    .mobile-px-sm { padding-left: var(--spacing-sm); padding-right: var(--spacing-sm); }
+    .mobile-py-sm { padding-top: var(--spacing-sm); padding-bottom: var(--spacing-sm); }
+}
+
+/* ============================================
+   RESPONSIVE FLEX
+   ============================================ */
+
+/* Cambiar dirección en móvil */
+@media (max-width: 767px) {
+    .mobile-flex-col {
+        flex-direction: column;
+    }
+    
+    .mobile-flex-row {
+        flex-direction: row;
+    }
+    
+    .mobile-items-center {
+        align-items: center;
+    }
+    
+    .mobile-justify-center {
+        justify-content: center;
+    }
+}
+
+/* ============================================
+   RESPONSIVE GRID
+   ============================================ */
+
+/* Grid responsive automático */
+@media (max-width: 767px) {
+    .mobile-grid-1 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .tablet-grid-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ============================================
+   CONTAINER QUERIES (Futuro)
+   ============================================ */
+
+/* Preparado para cuando los container queries tengan mejor soporte */
+/*
+@container (max-width: 400px) {
+    .container-small {
+        font-size: var(--font-size-sm);
+    }
+}
+*/

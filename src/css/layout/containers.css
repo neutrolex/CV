@@ -1,0 +1,43 @@
+/**
+ * CONTAINERS
+ * Contenedores principales y wrapper
+ */
+
+/* ============================================
+   WRAPPER PRINCIPAL
+   ============================================ */
+
+.wrapper {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: var(--spacing-2xl) var(--spacing-lg) 5rem;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: var(--spacing-lg) var(--spacing-md) 3.75rem;
+    }
+}
+
+/* ============================================
+   SECCIONES
+   ============================================ */
+
+.section {
+    margin-bottom: var(--spacing-3xl);
+}
+
+@media (max-width: 768px) {
+    .section {
+        margin-bottom: var(--spacing-2xl);
+    }
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+
+main {
+    position: relative;
+    z-index: var(--z-base);
+}

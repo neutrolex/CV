@@ -14,30 +14,166 @@
     
     <title>CV - Desarrollador Full Stack</title>
     
-    <!-- CSS -->
+    <!-- CSS Principal -->
     <link rel="stylesheet" href="./src/css/main.css">
     
     <!-- Favicon (opcional) -->
-    <!-- <link rel="icon" type="image/png" href="./public/favicon.ico"> -->
+    <!-- <link rel="icon" type="image/png" href="./assets/favicon.ico"> -->
 </head>
 <body>
     <!-- Decoraciones fijas -->
     <div class="deco-circle"></div>
     <div class="deco-square"></div>
 
-    <!-- Contenedor principal donde se inyectará el contenido -->
+    <!-- Contenedor principal -->
     <div class="wrapper">
-        <div id="app">
-            <!-- El contenido se cargará dinámicamente aquí -->
-            <div class="loading">Cargando CV</div>
-        </div>
-    </div>
+        <main id="app">
+            <!-- Header / Hero Section -->
+            <header class="hero">
+                <div class="name-block">
+                    <h1>Desarrollador Full Stack</h1>
+                </div>
+                <div class="subtitle">
+                    🧠 Python / Django / Web Dev
+                </div>
+                <p class="bio">
+                    Desarrollador enfocado en crear soluciones web robustas y escalables con Python y Django.
+                </p>
+            </header>
 
-    <!-- JavaScript -->
-    <!-- Cargar en orden: utilidades → data loader → animaciones → main -->
-    <script src="./src/js/utils.js"></script>
-    <script src="./src/utils/data-loader.js"></script>
-    <script src="./src/js/animations.js"></script>
-    <script src="./src/js/main.js"></script>
+            <!-- Sección 01: Stack Principal -->
+            <section class="section" id="stack-principal">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2>Stack Principal</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="content-grid two-column">
+                    <article class="item">
+                        <h3>⚙️ Backend</h3>
+                        <ul>
+                            <li>Python con Django</li>
+                            <li>Arquitectura monolítica</li>
+                            <li>Arquitectura hexagonal</li>
+                            <li>Multitenancy básico</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag accent">Python</span>
+                            <span class="tag">Django</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <h3>🎨 Frontend</h3>
+                        <ul>
+                            <li>Patrón MVT</li>
+                            <li>HTML estructurado</li>
+                            <li>CSS básico</li>
+                            <li>HTTP: GET, POST, PUT, DELETE</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">MVT</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Sección 02: Bases de Datos -->
+            <section class="section" id="bases-datos">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2>Bases de Datos</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="content-grid full-width">
+                    <article class="item">
+                        <h3>🗄️ Experiencia en SQL y NoSQL</h3>
+                        <ul>
+                            <li>MySQL para proyectos relacionales</li>
+                            <li>SQLite en desarrollo local</li>
+                            <li>MongoDB para datos no estructurados</li>
+                            <li>Modelado y diseño de esquemas</li>
+                            <li>Optimización de consultas</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag accent">MySQL</span>
+                            <span class="tag accent">SQLite</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Sección 03: APIs y Herramientas -->
+            <section class="section" id="apis-herramientas">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2>APIs y Herramientas</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="content-grid two-column">
+                    <article class="item">
+                        <h3>🔌 RESTful APIs</h3>
+                        <ul>
+                            <li>Testing con Postman</li>
+                            <li>Documentación de endpoints</li>
+                            <li>Diseño de APIs REST</li>
+                            <li>Consumo de servicios</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">REST</span>
+                            <span class="tag">Postman</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <h3>📦 Control de Versiones</h3>
+                        <ul>
+                            <li>Git para versionado</li>
+                            <li>GitHub colaborativo</li>
+                            <li>Branching y merging</li>
+                            <li>Gestión con Trello</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag accent">Git</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">Trello</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Sección 04: Metodologías Ágiles -->
+            <section class="section" id="metodologias">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2>Metodologías Ágiles</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3>🎯 Metodologías Ágiles</h3>
+                    <p>
+                        Experiencia trabajando con Scrum para desarrollo iterativo. He participado en proyectos MCP aplicando principios de coordinación y gestión ágil, colaborando efectivamente en equipos multidisciplinarios.
+                    </p>
+                    <div class="tags">
+                        <span class="tag accent">Scrum</span>
+                        <span class="tag">Agile</span>
+                        <span class="tag">MCP</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Desarrollado con 🧠 - 2025</p>
+        </footer>
+    </div>
 </body>
 </html>
